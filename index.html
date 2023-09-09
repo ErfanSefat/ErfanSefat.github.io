@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="menu" id="menu">
+        <div onclick="goToAbout()">about</div>
+        <div onclick="goToProjects()">projects</div>
+        <div onclick="goToContacts()">contact</div>
+    </div>
     <div class="top-bar">
         <div class="name">Erfan Sefat</div>
-        <div class="menu-button"><img src="./Pics/Menu-Button.svg" alt="Menu"></div>
+        <div class="menu-button" onclick="showMenu()"><img src="./Pics/Menu-Button.svg" alt="Menu"></div>
     </div>
     <div class="wrapper">
         <header>
@@ -18,13 +23,13 @@
             <img class="heart" src="./Pics/heart.svg" alt="heart">
         </header>
         <div class="sections">
-            <div class="section">
+            <div id="about" class="section">
                 <h1>about</h1>
             </div>
-            <div class="section projects">
+            <div id="projects" class="section projects">
                 <h1>Projects</h1>
             </div>
-            <div class="section contact">
+            <div id="contacts" class="section contact">
                 <div class="container">
                     <a href="tel:+989199158065">
                         <div class="phone"><img src="./Pics/phone.svg"></div>
