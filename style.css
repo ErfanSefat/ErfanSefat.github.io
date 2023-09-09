@@ -107,7 +107,11 @@ header{
     margin-right: 14px;
 }
 .email{
-    width: 378px;
     margin-top: -18px;
+    width: 315.58px;
+    height: 53.21px;
 
+    background: #FFFFFF;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 9.1px;
 }
