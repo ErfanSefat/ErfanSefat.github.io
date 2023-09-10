@@ -28,3 +28,18 @@ function goToContacts()
     const menu = document.getElementById("menu");
     menu.style.display = "none";
 }
+function scrollToTop()
+{
+    document.getElementById("top").scrollIntoView({behavior: 'smooth'});
+}
+function openBehance()
+{
+    window.open("https://be.net/erfansefat");
+}
+function openGithub()
+{
+    window.open("https://github.com/ErfanSefat");
+}
+function emailMe(){
+    window.open("mailto:erfansefat@yahoo.com");
+}

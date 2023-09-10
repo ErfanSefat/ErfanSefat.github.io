@@ -46,7 +46,7 @@ body{
     font-size: 18px;
     font-weight: 600;
 
-    background-color: rgb(255, 255, 255, 0.05);
+    background-color: rgb(255, 255, 255, 0.5);
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 12px;
@@ -55,10 +55,19 @@ body{
     backdrop-filter: blur(10px);
     box-shadow: 0px 3px 5px rgba(40, 49, 70, 0.1);
     border-radius: 6px;
+
+    transition:all, 0.5s;
+
+}
+.name:hover{
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+    transition:all, 0.5s;
+    cursor: pointer;
 }
 .menu-button{
     display: flex;
-    background-color: rgb(255, 255, 255, 0.05);
+    background-color: rgb(255, 255, 255, 0.5);
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 8px;
@@ -69,6 +78,14 @@ body{
     backdrop-filter: blur(10px);
     box-shadow: 0px 3px 5px rgba(40, 49, 70, 0.1);
     border-radius: 6px;
+
+    transition:all, 0.5s;
+}
+.menu-button:hover{
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+    transition:all, 0.5s;
+    cursor: pointer;
 }
 .wrapper{
     width: 100vw;
@@ -91,17 +108,30 @@ header{
 .intro{
     position: relative;
     z-index: -1px;
+
+    margin-bottom: 12vh;
+}
+.scrollAni{
+    position: absolute;
+
+    z-index: -200;
 }
 .heart{
-    position: absolute;
     bottom: -400px;
     left: -350px;
     width: 600px;
-
-    z-index: -200;
     transform: translateZ(-10px) scale(2);
 }
-
+.me{
+    top: 0px;
+    width: 200px;
+    transform: translateZ(-5px) scale(2);
+}
+.peacock{
+    top: 395vh;
+    width: 200px;
+    transform: translateZ(-5px) scale(2);
+}
 .sections{
     display: block;
     position: relative;
@@ -119,25 +149,133 @@ header{
     display: flex;
     flex-direction: column;
 }
+.behance, .github{
+    width: 315.58px;
+    height: 53.21px;
+    margin: 20px 0px;
+
+    background: #FFFFFF;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 9.1px;
+    transition:all, 0.5s;
+}
+.be-logo{
+    position: relative;
+    left: 0px;
+    top: 11px;
+    fill: #ffffff00;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    transition:all, 0.5s;
+}
+.be-name{
+    position: relative;
+    left: 65px;
+    top: 7px;
+    fill: #283146;
+    height: 20px;
+    width: 105.56px;
+    margin-top: 1px;
+    transition:all, 0.5s;
+}
+.behance:hover{
+    background-color: #005CFF;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+    transition:all, 0.5s;
+    cursor: pointer;
+}
+.behance:hover .be-logo{
+    fill: #FFFFFF;
+    left: 85px;
+    transition:all, 0.5s;
+}
+.behance:hover .be-name{
+    fill: #FFFFFF;
+    left: 85px;
+    transition:all, 0.5s;
+}
+.git-logo{
+    position: relative;
+    left: 0px;
+    top: 11px;
+    fill: #ffffff00;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    transition:all, 0.5s;
+}
+.git-name{
+    position: relative;
+    left: 81px;
+    top: 7px;
+    fill: #283146;
+    height: 20px;
+    width: 75px;
+    margin-top: 1px;
+    transition:all, 0.5s;
+}
+.github:hover{
+    background-color: #000000;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+    transition:all, 0.5s;
+    cursor: pointer;
+}
+.github:hover .git-logo{
+    fill: #FFFFFF;
+    left: 101px;
+    transition:all, 0.5s;
+}
+.github:hover .git-name{
+    fill: #FFFFFF;
+    left: 101.59px;
+    transition:all, 0.5s;
+}
 .container{
     width: 378px;
     height: 134px;
     display: flex;
 }
+.phone:hover, .telegram:hover{
+    scale: 1.05;
+    transition:all, 0.5s;
+}
 .phone{
     width: 196;
     margin-right: -14px;
+    transition:all, 0.5s;
 }
 .telegram{
     width: 196;
     margin-right: 14px;
+    transition:all, 0.5s;
 }
 .email{
-    margin-top: -18px;
     width: 315.58px;
     height: 53.21px;
+    margin: 20px 0px;
 
     background: #FFFFFF;
     box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 9.1px;
+    transition:all, 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email a{
+    font-family: 'poppins';
+    font-weight: 700;
+    font-size: 21px;
+    color: #283146;
+    text-decoration: none;
+}
+.email:hover{
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+    transition:all, 0.5s;
+    cursor: pointer;
 }
