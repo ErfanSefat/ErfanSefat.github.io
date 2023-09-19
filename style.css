@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
 body{
     padding: 0;
     margin: 0;
@@ -6,6 +11,7 @@ body{
     display: flex;
     justify-content: center;
     color: #283146;
+    font-family: 'poppins';
 }
 .menu{
     position: absolute;
@@ -22,7 +28,6 @@ body{
     align-items: center;
 }
 .menu div{
-    font-family: 'poppins';
     font-weight: 600;
     font-size: 10vw;
 }
@@ -30,7 +35,7 @@ body{
     font-size: 20vw;
     cursor: pointer;
 }
-.top-bar{
+.topBar-PhoneTablet{
     position: fixed;
     width: 80vw;
     margin-top: 36px;
@@ -39,19 +44,18 @@ body{
     justify-content: space-between;
     z-index: 10;
 }
+.topBar-Desktop{display: none;}
 .name{
     color: #283146;
-    display: inline-block;
-    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
     font-weight: 600;
+    height: 29px;
+    width: 123px;
 
     background-color: rgb(255, 255, 255, 0.5);
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 12px;
-    padding-right: 12px;
-    
     backdrop-filter: blur(10px);
     box-shadow: 0px 3px 5px rgba(40, 49, 70, 0.1);
     border-radius: 6px;
@@ -67,19 +71,15 @@ body{
 }
 .menu-button{
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255, 0.5);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-    height: 13px;
-    width: 13px;
-
+    height: 29px;
+    width: 29px;
     backdrop-filter: blur(10px);
     box-shadow: 0px 3px 5px rgba(40, 49, 70, 0.1);
     border-radius: 6px;
-
-    transition:all, 0.5s;
+    transition: all, 0.5s;
 }
 .menu-button:hover{
     box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -127,11 +127,6 @@ header{
     width: 200px;
     transform: translateZ(-5px) scale(2);
 }
-.peacock{
-    top: 395vh;
-    width: 200px;
-    transform: translateZ(-5px) scale(2);
-}
 .sections{
     display: block;
     position: relative;
@@ -145,9 +140,18 @@ header{
 
     scroll-snap-align: start;
 }
+.contacts{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
 .contact{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 .behance, .github{
     width: 315.58px;
@@ -233,24 +237,92 @@ header{
     left: 101.59px;
     transition:all, 0.5s;
 }
-.container{
-    width: 378px;
-    height: 134px;
+.contactBoxContainer{
     display: flex;
+    justify-content: space-between;
+    width: 342.58px;
 }
-.phone:hover, .telegram:hover{
+.contactBox{
+    height: 100.95px;
+    width: 163.46px;
+    position: relative;
+    transition:all, 0.5s;
+}
+.contactBox svg{transition:all, 0.5s;}
+.contactBox:hover{
     scale: 1.05;
     transition:all, 0.5s;
+    cursor: pointer;
 }
-.phone{
-    width: 196;
-    margin-right: -14px;
+.contactBox:hover svg{
+    scale: 1.1;
     transition:all, 0.5s;
+    cursor: pointer;
+    filter: drop-shadow(-4px 4px 15px rgba(38, 111, 249, 0.5));
 }
-.telegram{
-    width: 196;
-    margin-right: 14px;
-    transition:all, 0.5s;
+.TelegramIcon{
+    position: absolute;
+    right: 0;
+    filter: drop-shadow(-4px 4px 15px rgba(38, 111, 249, 0.33));
+}
+.whiteTelegram{
+    position: absolute;
+    bottom: 0;
+
+    background-color: white;
+    width: 150px;
+    height: 70.33px;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 9.1px;
+    padding-left: 17px;
+    padding-top: 14px;
+}
+.addressTelegram{
+    color: #28314680;
+    font-size: 12px;
+    font-weight: 200;
+    height: 18px;
+    margin-bottom: -2px;
+    margin-left: 2px;
+}
+.IDTelegram{
+    font-size: 20.55px;
+    font-weight: 700;
+    height: 31px;
+}
+.PhoneIcon{
+    position: absolute;
+    left: 0;
+    filter: drop-shadow(4px 4px 15px rgba(38, 111, 249, 0.33));
+}
+.whitePhone{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    background-color: white;
+    width: 150px;
+    height: 70.33px;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 9.1px;
+    padding-right: 15px;
+    padding-top: 14px;
+}
+.areaCode{
+    color: #28314680;
+    font-size: 12px;
+    font-weight: 200;
+    height: 18px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+}
+.IDNumber{
+    font-size: 20.55px;
+    font-weight: 700;
+    height: 31px;
 }
 .email{
     width: 315.58px;
@@ -267,7 +339,6 @@ header{
     align-items: center;
 }
 .email a{
-    font-family: 'poppins';
     font-weight: 700;
     font-size: 21px;
     color: #283146;
@@ -278,4 +349,87 @@ header{
     scale: 1.05;
     transition:all, 0.5s;
     cursor: pointer;
+}
+.Peacock{
+    width: 250px;
+    bottom: 0;
+}
+@media only screen and (min-width: 820px){
+
+    .contact{
+        scale: 1.1 ;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .Peacock{
+        width: 200px;
+        bottom: 0;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .topBar-PhoneTablet{
+        display: none;
+    }
+    .topBar-Desktop{
+        position: fixed;
+        width: 80vw;
+        margin-top: 36px;
+    
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+    }
+    .name{
+        font-size: 22px;
+        font-weight: 600;
+        height: 35px;
+        width: 150px;
+    }
+    .menuOptions{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #283146;
+        font-size: 15px;
+        font-weight: 500;
+        height: 35px;
+        width: 25vw;
+        background-color: rgb(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 3px 5px rgba(40, 49, 70, 0.1);
+        border-radius: 6px;
+        transition:all, 0.5s;
+    }
+    .menuOptions div{
+        margin: 10px;
+        transition:all, 0.5s;
+    }
+    .menuOptions div:hover{
+        scale: 1.05;
+        transition:all, 0.5s;
+        cursor: pointer;
+    }
+    .sections{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section{
+        width: 900px;
+    }
+    .contacts{
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+    }
+    .contact{
+        height: 100%;
+        scale: 1.2;
+    }
+    .Peacock{
+        display: block;
+        width: 30vw;
+    }
+
 }

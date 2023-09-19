@@ -43,3 +43,9 @@ function openGithub()
 function emailMe(){
     window.open("mailto:erfansefat@yahoo.com");
 }
+function callMe(){
+    window.open("tel:+989199158065");
+}
+function telegramMe(){
+    window.open("https://t.me/ErfanSefat");
+}
