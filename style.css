@@ -375,7 +375,7 @@ header{
     justify-content: center;
     align-items: center;
     overflow: auto;
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 30px;
     perspective: 600px;
     overflow: visible;
@@ -384,7 +384,7 @@ header{
     pointer-events: none;
 }
 .cards{
-    height: 450px;
+    height: 400px;
     transition: all 1s;
     margin: 30px;
     position: absolute;
@@ -452,6 +452,12 @@ header{
     }
     .butt{
         margin: 0px 10px 40px;
+    }
+    .card-slider{
+        margin-top: 80px;
+    }
+    .cards{
+        height: 450px;
     }
 }
 @media only screen and (min-width: 1000px){
