@@ -375,13 +375,15 @@ header{
     justify-content: center;
     align-items: center;
     overflow: auto;
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+
 }
 .card-slider img{
     pointer-events: none;
 }
 .cards{
-    height: 500px;
+    height: 450px;
     transition: all 1s;
     margin: 30px;
     position: absolute;
@@ -433,7 +435,6 @@ header{
     transition:all, 0.5s;
     filter: drop-shadow(-4px 4px 15px rgba(38, 111, 249, 0.5));
 }
-
 @media only screen and (min-width: 820px){
 
     .contact{
