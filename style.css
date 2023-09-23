@@ -97,6 +97,7 @@ body{
     scroll-snap-type: y mandatory;
     z-index: -10px;
 }
+.wrapper img{pointer-events: none;}
 header{
     display: flex;
     align-items: center;
@@ -106,10 +107,7 @@ header{
     transform-style: preserve-3d;
 }
 .intro{
-    position: relative;
     z-index: -1px;
-
-    margin-bottom: 12vh;
 }
 .scrollAni{
     position: absolute;
@@ -354,6 +352,88 @@ header{
     width: 250px;
     bottom: 0;
 }
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(100%);
+    filter: blur(5px);
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+.projects{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.card-slider{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    margin-top: 50px;
+}
+.card-slider img{
+    pointer-events: none;
+}
+.cards{
+    height: 500px;
+    transition: all 1s;
+    margin: 30px;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(40, 49, 70, 0.15);
+}
+.unselected-left-left{
+    scale: 0.8;
+    margin-right: 600px;
+    z-index: 1;
+}
+.unselected-left{
+    scale: 1;
+    margin-right: 300px;
+    z-index: 3;
+}
+.selected{
+    scale: 1.2;
+    z-index: 5;
+    box-shadow: 0px 10px 20px rgba(40, 49, 70, 0.3);
+}
+.unselected-right{
+    scale: 1;
+    margin-left: 300px;
+    z-index: 4;
+
+}
+.unselected-right-right{
+    margin-left: 600px;
+    scale: 0.8;
+    z-index: 2;
+}
+.controls{
+    display: flex;
+}
+.butt{
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    margin: 0px 10px 40px;
+    filter: drop-shadow(4px 4px 15px rgba(38, 111, 249, 0.33));
+    transition:all, 0.5s;
+}
+.butt img{
+    width: 50px;
+}
+.butt:hover{
+    scale: 1.1;
+    transition:all, 0.5s;
+    filter: drop-shadow(-4px 4px 15px rgba(38, 111, 249, 0.5));
+}
+
 @media only screen and (min-width: 820px){
 
     .contact{
@@ -373,41 +453,69 @@ header{
     .topBar-Desktop{
         position: fixed;
         width: 80vw;
-        margin-top: 36px;
+        margin-top: 50px;
     
         display: flex;
         justify-content: space-between;
         z-index: 10;
     }
     .name{
-        font-size: 22px;
-        font-weight: 600;
-        height: 35px;
-        width: 150px;
+        font-size: 25px;
+        font-weight: 700;
+        width: max-content;
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: none;
+        box-shadow: none;
+        border: none;
+    }
+    .name:hover{    
+        box-shadow: none;
+        scale: 1.05;
+        transition:all, 0.2s;
+        cursor: pointer;
     }
     .menuOptions{
         display: flex;
-        justify-content: space-around;
         align-items: center;
         color: #283146;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 500;
         height: 35px;
-        width: 25vw;
-        background-color: rgb(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        box-shadow: 0px 3px 5px rgba(40, 49, 70, 0.1);
-        border-radius: 6px;
-        transition:all, 0.5s;
+        transition:all, 0.2s;
     }
     .menuOptions div{
-        margin: 10px;
-        transition:all, 0.5s;
+        margin: 0px 35px;
+        transition:all, 0.2s;
     }
     .menuOptions div:hover{
         scale: 1.05;
-        transition:all, 0.5s;
+        transition:all, 0.2s;
         cursor: pointer;
+    }
+    .heart{
+        bottom: -500px;
+        left: -600px;
+        width: 800px;
+        transform: translateZ(-10px) scale(2);
+    }
+    .intro{
+        position: relative;
+        background: rgba(217, 217, 217, 0.1);
+        backdrop-filter: blur(80px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+
+        transition: 0.1s;            
+    }
+    .intro img{
+        width: 800px;
+        z-index: -1px;
+        margin: 0;
+        padding: 40px 50px 30px;
+    }
+    .intro:hover{
+        scale: 1.1 ;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
     }
     .sections{
         display: flex;
@@ -415,13 +523,12 @@ header{
         align-items: center;
     }
     .section{
-        width: 900px;
+        width: 1000px;
     }
     .contacts{
         display: flex;
         flex-direction: row;
         align-items: end;
-        justify-content: space-between;
     }
     .contact{
         height: 100%;
@@ -430,6 +537,6 @@ header{
     .Peacock{
         display: block;
         width: 30vw;
+        margin-right: 100px;
     }
-
 }

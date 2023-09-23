@@ -35,22 +35,35 @@
     </div>
     <div class="wrapper">
         <header id="top">
-            <img class="intro" src="./Pics/intro.svg">
+            <div class="intro magnet">
+                <img src="./Pics/intro.svg">
+
+            </div>
             <img class="scrollAni heart" src="./Pics/heart.svg">
-            <img class="scrollAni me" src="./Pics/me.png">
+            
         </header>
         <div class="sections">
             <div id="about" class="section">
                 <h1>about</h1>
             </div>
-            <div id="projects" class="section">
-                <h1>Projects</h1>
+            <div id="projects" class="section projects">
+                <div class="card-slider">
+                    <img class="cards unselected-left-left" src="./Pics/Projects/IKIU.png">
+                    <img class="cards unselected-left" src="./Pics/Projects/Beats.png">
+                    <img class="cards selected" src="./Pics/Projects/Filimo_Redesign.png">
+                    <img class="cards unselected-right" src="./Pics/Projects/YT.png">
+                    <img class="cards unselected-right-right" src="./Pics/Projects/Emotes.png">
+                </div>
+                <div class="controls">
+                    <div class="butt magnet" onclick="previous()"><img src="./Pics/Projects/PREVIOUS.svg"></div>
+                    <div class="butt magnet" onclick="next()"><img src="./Pics/Projects/NEXT.svg"></div>
+                </div>
             </div>
             <div id="contacts" class="section contacts">
                 <img class="Peacock" src="./Pics/Peacock.svg">
                 <div class="contact">
                     <div class="portfolio-web">
-                        <div class="behance" onclick="openBehance()">
+                        <div class="behance hidden" onclick="openBehance()">
                             <svg class="be-logo">
                                 <path d="M22.2038 15.4H18.2319C18.4007 14.2392 19.0495 13.6248 20.2222 13.6248C21.295 13.6248 22.1198 14.1624 22.2038 15.4Z"/>
                                 <path d="M10.6671 13.8H7.79997V11.4H10.4175C12.9919 11.4 12.6735 13.8 10.6671 13.8Z"/>
@@ -65,7 +78,7 @@
                                 <path d="M71.3938 9.58238C71.3938 9.58238 71.3938 8.09391 68.9315 8.09391C66.6487 8.09391 66.2304 9.88768 66.2304 11.6044C66.2304 13.321 65.9639 7.82665 65.9639 7.82665C65.9639 7.82665 67.2196 4.96484 70.5686 4.96484C73.9165 4.96484 75.325 7.39183 75.325 9.77564C75.325 12.1594 73.979 11.0081 73.979 11.0081L71.3938 10.3934V9.58238ZM60.9482 19.5052C60.9482 19.5052 60.2122 19.1258 60.2122 16.8089V8.45164C60.2122 8.45164 60.6806 4.96587 54.4174 4.96587C48.1551 4.96587 47.7533 8.11345 47.7195 9.99356H51.9059C51.9059 9.99356 51.7388 7.50696 54.3845 7.50696C54.3845 7.50696 56.6285 7.3281 56.6285 9.58341C56.6285 9.58341 56.6285 11.0657 54.5855 11.2004C52.5425 11.335 47.3515 11.3021 47.3515 15.5332C47.3515 15.5332 47.2172 19.9996 51.99 19.9996C51.99 19.9996 55.2559 20.0664 56.6285 18.0516V19.5052H60.9482ZM56.5946 15.0963C56.5946 15.0963 56.2594 17.2457 53.4128 17.2457C53.4128 17.2457 51.0684 17.3475 51.0684 15.3317C51.0684 15.3317 50.8675 13.7867 54.1498 13.283C55.4558 13.1823 56.0585 13.0918 56.5946 12.4822V15.0963ZM90.6387 13.982H86.5424C86.5424 13.982 86.6429 16.8726 83.9633 16.8726C81.2827 16.8726 80.5754 13.9923 80.5754 12.3404C80.5754 10.6864 81.131 7.89758 84.0136 7.89758C86.8961 7.89758 86.7946 10.3821 86.7946 10.3821H90.3855C90.3855 10.3821 90.6376 4.96587 84.0648 4.96587C77.491 4.96587 76.7837 10.304 76.7837 12.4473C76.7837 14.5905 77.8959 19.9996 83.9643 19.9996C90.0318 19.9986 90.6387 15.0973 90.6387 13.982Z"/>
                             </svg>
                         </div>
-                        <div class="github" onclick="openGithub()">
+                        <div class="github hidden" onclick="openGithub()">
                             <svg class="git-logo">
                                 <g clip-path="url(#clip0_87_686)">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2485 0C6.8165 0 0 6.875 0 15.3803C0 22.1791 4.36756 27.9341 10.4265 29.9709C11.1841 30.1241 11.4615 29.64 11.4615 29.2328C11.4615 28.8762 11.4366 27.6541 11.4366 26.3806C7.19479 27.2975 6.31148 24.5472 6.31148 24.5472C5.6298 22.7647 4.61976 22.3066 4.61976 22.3066C3.23143 21.3644 4.72089 21.3644 4.72089 21.3644C6.26091 21.4662 7.069 22.9431 7.069 22.9431C8.43205 25.2856 10.6285 24.6237 11.5121 24.2162C11.6382 23.2231 12.0424 22.5356 12.4716 22.1537C9.08845 21.7972 5.52898 20.4731 5.52898 14.5653C5.52898 12.8847 6.1345 11.5097 7.09397 10.4403C6.94259 10.0584 6.41229 8.47938 7.24567 6.36594C7.24567 6.36594 8.53318 5.95844 11.4363 7.94469C12.6792 7.60802 13.961 7.43675 15.2485 7.43531C16.5361 7.43531 17.8485 7.61375 19.0605 7.94469C21.9639 5.95844 23.2514 6.36594 23.2514 6.36594C24.0848 8.47938 23.5542 10.0584 23.4028 10.4403C24.3876 11.5097 24.9681 12.8847 24.9681 14.5653C24.9681 20.4731 21.4086 21.7716 18.0002 22.1537C18.5558 22.6375 19.0352 23.5541 19.0352 25.0056C19.0352 27.0681 19.0103 28.7234 19.0103 29.2325C19.0103 29.64 19.2881 30.1241 20.0453 29.9712C26.1043 27.9337 30.4718 22.1791 30.4718 15.3803C30.4968 6.875 23.6553 0 15.2485 0Z"  />
@@ -89,7 +102,7 @@
                         </div>
                     </div>
                     <div class="contactBoxContainer">
-                        <div class="contactBox" onclick="callMe()">                                
+                        <div class="contactBox hidden" onclick="callMe()">                                
                             <div class="whitePhone">
                                 <div class="areaCode">+98</div>
                                 <div class="IDNumber">9199158065</div>
@@ -119,7 +132,7 @@
                                 </svg>
                                 
                         </div>
-                        <div class="contactBox" onclick="telegramMe()">                                
+                        <div class="contactBox hidden" onclick="telegramMe()">                                
                             <div class="whiteTelegram">
                                 <div class="addressTelegram">telegram.me/</div>
                                 <div class="IDTelegram">ErfanSefat</div>
@@ -148,7 +161,7 @@
                                 </defs></svg>
                         </div>
                     </div>
-                    <div class="email" onclick="emailMe()">
+                    <div class="email hidden" onclick="emailMe()">
                         <a>ErfanSefat@yahoo.com</a>
                     </div>
                 </div>
