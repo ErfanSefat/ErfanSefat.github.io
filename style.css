@@ -377,7 +377,8 @@ header{
     overflow: auto;
     margin-top: 80px;
     margin-bottom: 30px;
-
+    perspective: 600px;
+    overflow: visible;
 }
 .card-slider img{
     pointer-events: none;
@@ -394,11 +395,13 @@ header{
     scale: 0.8;
     margin-right: 600px;
     z-index: 1;
+    transform: rotateY(20deg);
 }
 .unselected-left{
     scale: 1;
     margin-right: 300px;
     z-index: 3;
+    transform: rotateY(10deg);
 }
 .selected{
     scale: 1.2;
@@ -409,12 +412,13 @@ header{
     scale: 1;
     margin-left: 300px;
     z-index: 4;
-
+    transform: rotateY(-10deg);
 }
 .unselected-right-right{
     margin-left: 600px;
     scale: 0.8;
     z-index: 2;
+    transform: rotateY(-20deg);
 }
 .controls{
     display: flex;
@@ -423,7 +427,7 @@ header{
     width: 50px;
     height: 50px;
     z-index: 100;
-    margin: 0px 10px 40px;
+    margin: 0px 10px 70px;
     filter: drop-shadow(4px 4px 15px rgba(38, 111, 249, 0.33));
     transition:all, 0.5s;
 }
@@ -445,6 +449,9 @@ header{
     .Peacock{
         width: 200px;
         bottom: 0;
+    }
+    .butt{
+        margin: 0px 10px 40px;
     }
 }
 @media only screen and (min-width: 1000px){

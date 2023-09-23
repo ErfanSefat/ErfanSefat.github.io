@@ -122,3 +122,8 @@ function previous(){
     unselected_R.classList.remove('unselected-right');
     unselected_R_R.classList.remove('unselected-right-right');
 }
+document.addEventListener('keydown', (event) => {
+    console.log(event.keyCode);
+    if(event.keyCode === 39){next();}
+    else if(event.keyCode === 37){previous();}
+});
