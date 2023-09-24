@@ -483,9 +483,6 @@ header{
     filter: drop-shadow(-4px 4px 15px rgba(38, 111, 249, 0.5));
 }
 @media only screen and (min-width: 820px){
-
-    .intro{display: block;}
-    .intro-Phone{display: none;}
     .contact{
         scale: 1.1 ;
         justify-content: center;
@@ -509,6 +506,8 @@ header{
     }
 }
 @media only screen and (min-width: 1000px){
+    .intro{display: block;}
+    .intro-Phone{display: none;}
     .topBar-PhoneTablet{
         display: none;
     }
