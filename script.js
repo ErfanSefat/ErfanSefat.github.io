@@ -68,6 +68,7 @@ function telegramMe(){
     })
     
 }
+//contact boxes showing up
 {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -83,6 +84,27 @@ function telegramMe(){
     hiddenItems.forEach((item) => {
         observer.observe(item);
     });
+}
+//intro parts showing up
+{
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if(entry.isIntersecting)
+            {
+                entry.target.classList.add("show");
+            }else{
+                entry.target.classList.remove("show");
+            }
+        });
+    });
+    const hiddenItems = document.querySelectorAll(".goneLeft");
+    hiddenItems.forEach((item) => {
+        observer.observe(item);
+    });
+}
+//showing -for now-
+{
+    
 }
 function next(){
     const selected = document.querySelector(".selected");
