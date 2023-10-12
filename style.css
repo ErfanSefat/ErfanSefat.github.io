@@ -188,8 +188,8 @@ header{
     justify-content: space-around;
 }
 #about div{
-    display: block;
-    min-height: 50dvh;
+    display: none;
+    height: 400px;
     position: relative;
     background: rgba(217, 217, 217, 0.1);
     backdrop-filter: blur(80px);
@@ -199,12 +199,12 @@ header{
 }
 .myDoction{
     padding: 30px;
-    font-size: 19px;
+    font-size: 20.6px;
     width: 70%;
 }
 #about img{
     filter: grayscale();
-    height: 50dvh;
+    height: 400px;
     border-radius: 30px;
 }
 .contacts{
